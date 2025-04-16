@@ -18,5 +18,5 @@ from sklearn.linear_model import LinearRegression
 
 Heart_Data =pandas.read_csv (heart_attack_russia.csv)
 
-X=Heart_Data["Obesity"] 
-Y= Heart_Data[]
+X=Heart_Data["Obesity", "Heart-Attack-History","Cholesterol","Diet","Excercise-Habits"] 
+Y= Heart_Data["Heart-Attack"]
