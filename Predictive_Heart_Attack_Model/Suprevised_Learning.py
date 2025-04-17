@@ -1,3 +1,4 @@
+# Basic Packages
 import urllib
 import statistics 
 import numpy as nu
@@ -14,7 +15,7 @@ from sklearn.linear_model import LinearRegression
 
 # Y being the factor to predict (prediction)
 
-# Basic Packages
+
 
 # Data Exploration
 Heart_Data =pandas.read_csv (Astro0re/Machine_Learning_and_AI/Predictive_Heart_Attack_Model/heart_attack_russia.csv)
