@@ -1,6 +1,6 @@
 import urllib
-
-import pandas
+import statistics 
+import numpy as nu
 import pandas as pd
 import matplotlib.pyplot as plt
 import sklearn
@@ -16,7 +16,10 @@ from sklearn.linear_model import LinearRegression
 
 # Basic Packages
 
-Heart_Data =pandas.read_csv (heart_attack_russia.csv)
+# Data Exploration
+Heart_Data =pandas.read_csv (Astro0re/Machine_Learning_and_AI/Predictive_Heart_Attack_Model/heart_attack_russia.csv)
+print(Heart_Data.info())
+print(Heart_Data.head())
 
 X=Heart_Data["Obesity", "Heart-Attack-History","Cholesterol","Diet","Excercise-Habits"] 
 Y= Heart_Data["Heart-Attack"]
