@@ -21,6 +21,7 @@ from sklearn.linear_model import LinearRegression
 Heart_Data =pandas.read_csv (Astro0re/Machine_Learning_and_AI/Predictive_Heart_Attack_Model/heart_attack_russia.csv)
 print(Heart_Data.info())
 print(Heart_Data.head())
+print(Heart_Data.index())
 
 X=Heart_Data["Obesity", "Heart-Attack-History","Cholesterol","Diet","Excercise-Habits"] 
 Y= Heart_Data["Heart-Attack"]
