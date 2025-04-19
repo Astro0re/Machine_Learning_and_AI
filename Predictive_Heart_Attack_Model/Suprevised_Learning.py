@@ -18,10 +18,11 @@ from sklearn.linear_model import LinearRegression
 
 
 # Data Exploration
-Heart_Data =pd.read_csv (Predictive_Heart_Attack_Model/heart_attack_russia.csv)
+Heart_Data =pd.read_csv ( C:\Users\USER\Documents\VSC\Git_\AI\Predictive_Heart_Attack_Model\heart_attack_russia.csv )
 print(Heart_Data.info())
 print(Heart_Data.head())
 print(Heart_Data.index())
 
-X=Heart_Data["Obesity", "Heart-Attack-History","Cholesterol","Diet","Excercise-Habits"] 
+X= Heart_Data["Obesity", "Heart-Attack-History","Cholesterol","Diet","Excercise-Habits"] 
 Y= Heart_Data["Heart-Attack"]
+
