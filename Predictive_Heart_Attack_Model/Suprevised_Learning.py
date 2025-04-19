@@ -18,7 +18,7 @@ from sklearn.linear_model import LinearRegression
 
 
 # Data Exploration
-Heart_Data =pandas.read_csv (Astro0re/Machine_Learning_and_AI/Predictive_Heart_Attack_Model/heart_attack_russia.csv)
+Heart_Data =pd.read_csv (Predictive_Heart_Attack_Model/heart_attack_russia.csv)
 print(Heart_Data.info())
 print(Heart_Data.head())
 print(Heart_Data.index())
