@@ -27,14 +27,18 @@ print(Heart_Data.shape)
 # print(Heart_Data.index)
 
 # X= Heart_Data["Obesity", "Heart-Attack-History","Cholesterol","Diet",]
-x= Heart_Data.loc[:, Heart_Data.columns != 'Heart-Attack']
-Y= Heart_Data["Heart-Attack"]
+X = Heart_Data.loc[:, Heart_Data.columns != 'Heart_Attack']
+print(X)
+Y = Heart_Data["Heart_Attack"]
+print(Y)
 
 
 kn=KNeighborsRegressor()
-kn.fit(x,Y)
-pre_1=kn.predict(x)
+kn.fit(X,Y)
+pre_1=kn.predict(X)
+print(pre_1)
 
 lr=LinearRegression()
-lr.fit(x,Y)
-per_1= lr.predict(x)
+lr.fit(X,Y)
+pre_2 = lr.predict(X)
+print(pre_2)
