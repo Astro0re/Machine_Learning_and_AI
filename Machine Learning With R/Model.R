@@ -24,3 +24,4 @@ install_github("vqv/ggbiplot")
 
 # My Model
 library(deepnet)
+Data <- read.csv()
