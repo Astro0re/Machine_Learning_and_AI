@@ -32,28 +32,25 @@ print(Heart_Data.shape)
 Heart_Data = Heart_Data.fillna('Null')
 
 factor = Heart_Data.loc[:, Heart_Data.columns != 'Heart_Attack']
+
 print(factor)
 
 type(factor.column).value_counts()
 
-
-
-
-
-
-for column in factor:
+def organize_col(factor):
     factor_int=pd.DataFrame()
     factor_char=pd.DataFrame()
     factor_bool=pd.DataFrame()
-    
-    if factor.column.astype(int) == True:
-        factor_int.append
 
-    if factor.column.astype(chr) == True :
-        factor_char.append
+    for column in factor.columns:
+        if factor.column.astype(int) == True:
+            factor_int.append
 
-    if factor.column.astype(bool) == True :
-        factor_bool.append
+        if factor.column.astype(chr) == True :
+            factor_char.append
+
+        if factor.column.astype(bool) == True :
+            factor_bool.append
 
 
 label_encode= LabelEncoder()
