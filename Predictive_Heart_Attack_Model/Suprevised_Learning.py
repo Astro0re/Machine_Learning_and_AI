@@ -34,26 +34,31 @@ Heart_Data = Heart_Data.fillna('Null')
 factor = Heart_Data.loc[:, Heart_Data.columns != 'Heart_Attack']
 print(factor)
 
-type(factor[column]).value_counts()
-
-factor_int=pd.DataFrame()
-factor_char=pd.DataFrame()
-factor_bool=pd.DataFrame()
+type(factor.column).value_counts()
 
 
-if factor.astype(int) == True :
-    factor_int.append
 
-if factor.astype(chr) == True :
-    factor_char.append
 
-if factor.astype(bool) == True :
-    factor_bool.append
+
 
 for column in factor:
-    label_encode= LabelEncoder()
-    factor[column]= label_encode[column]
-    fit_transform(factor[column])
+    factor_int=pd.DataFrame()
+    factor_char=pd.DataFrame()
+    factor_bool=pd.DataFrame()
+    
+    if factor.column.astype(int) == True:
+        factor_int.append
+
+    if factor.column.astype(chr) == True :
+        factor_char.append
+
+    if factor.column.astype(bool) == True :
+        factor_bool.append
+
+
+label_encode= LabelEncoder()
+factor[column]= label_encode[column]
+fit_transform(factor[column])
 
 
 # X= Heart_Data["Obesity", "Heart-Attack-History","Cholesterol","Diet",]
