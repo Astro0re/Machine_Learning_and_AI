@@ -9,6 +9,9 @@ import matplotlib.pyplot as plt
 import sklearn
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.linear_model import LinearRegression
+from sklearn.preprocessing import LabelEncoder, StandardScaler
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, classification_report
 
 # To use Heart Attack in Russia Data to create a predictive model
 
@@ -26,10 +29,36 @@ print(Heart_Data.head())
 print(Heart_Data.shape)
 # print(Heart_Data.index)
 
+Heart_Data = Heart_Data.fillna('Null')
+
+factor = Heart_Data.loc[:, Heart_Data.columns != 'Heart_Attack']
+print(factor)
+
+type(factor[column]).value_counts()
+
+factor_int=pd.DataFrame()
+factor_char=pd.DataFrame()
+factor_bool=pd.DataFrame()
+
+
+if factor.astype(int) == True :
+    factor_int.append
+
+if factor.astype(chr) == True :
+    factor_char.append
+
+if factor.astype(bool) == True :
+    factor_bool.append
+
+for column in factor:
+    label_encode= LabelEncoder()
+    factor[column]= label_encode[column]
+    fit_transform(factor[column])
+
+
 # X= Heart_Data["Obesity", "Heart-Attack-History","Cholesterol","Diet",]
-X = Heart_Data.loc[:, Heart_Data.columns != 'Heart_Attack']
-print(X)
-Y = Heart_Data["Heart_Attack"]
+
+target = Heart_Data["Heart_Attack"]
 print(Y)
 
 
