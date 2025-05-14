@@ -48,27 +48,23 @@ def organize_col(df):
             factor_int.append
         if type(chr) == True :
             factor_char.append
-        if type(bool) == True :
+        if factor.column.astype(bool) == True :
             factor_bool.append
 
-
-label_encode= LabelEncoder()
-factor[column]= label_encode[column]
-fit_transform(factor[column])
 
 
 # X= Heart_Data["Obesity", "Heart-Attack-History","Cholesterol","Diet",]
 
 target = Heart_Data["Heart_Attack"]
-print(Y)
+print(target)
 
 
 kn=KNeighborsRegressor()
-kn.fit(X,Y)
-pre_1=kn.predict(X)
+kn.fit(factor,target)
+pre_1=kn.predict(factor)
 print(pre_1)
 
 lr=LinearRegression()
-lr.fit(X,Y)
-pre_2 = lr.predict(X)
+lr.fit(factor,target)
+pre_2 = lr.predict(factor)
 print(pre_2)
