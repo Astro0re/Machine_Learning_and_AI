@@ -12,6 +12,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report
+from Predictive_Heart_Attack_Model.Suprevised_Learning import organize_col
 
 # To use Heart Attack in Russia Data to create a predictive model
 
@@ -37,19 +38,17 @@ print(factor)
 
 type(factor.column).value_counts()
 
-def organize_col(factor):
+def organize_col(df):
     factor_int=pd.DataFrame()
     factor_char=pd.DataFrame()
     factor_bool=pd.DataFrame()
 
-    for column in factor.columns:
-        if factor.column.astype(int) == True:
+    for column in df.columns:
+        if type(int) == True:
             factor_int.append
-
-        if factor.column.astype(chr) == True :
+        if type(chr) == True :
             factor_char.append
-
-        if factor.column.astype(bool) == True :
+        if type(bool) == True :
             factor_bool.append
 
 
