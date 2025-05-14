@@ -1,3 +1,5 @@
+library(ggpairs)
+
 breast_cancer_stats <- read.csv("C:/Users/USER/Downloads/breast+cancer+wisconsin+diagnostic/wdbc.data", header=FALSE)
 
 breast_cancer_col_name <- c("ID","Diagnosis","Radius.Mean","Texture.Mean",
@@ -14,3 +16,5 @@ breast_cancer_col_name <- c("ID","Diagnosis","Radius.Mean","Texture.Mean",
 colnames(breast_cancer_stats) <- breast_cancer_col_name
 
 breast_cancer_stats$Diagnosis <- as.factor(breast_cancer_stats$Diagnosis)
+breast_CancerstatsNoID <- breast_cancer_stats[2:ncol(breast_cancer_stats)]
+ggpairs(breast_CancerstatsNoID[1:5], aes(color=Diagnosis, alpha=0.4))
