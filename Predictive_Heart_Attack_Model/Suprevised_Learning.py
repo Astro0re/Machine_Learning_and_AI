@@ -38,10 +38,9 @@ print(factor)
 
 type(factor.column).value_counts()
 
-import pandas as pd
 
+ # Select columns by dtype using pandas select_dtypes
 def organize_col(df):
-    # Select columns by dtype using pandas select_dtypes
     factor_int = df.select_dtypes(include=['int64', 'int32', 'int16', 'int8'])
     factor_bool = df.select_dtypes(include=['bool'])
     factor_char = df.select_dtypes(include=['object', 'string'])
