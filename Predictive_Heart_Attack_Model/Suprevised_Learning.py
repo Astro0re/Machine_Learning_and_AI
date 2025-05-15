@@ -38,18 +38,16 @@ print(factor)
 
 type(factor.column).value_counts()
 
-def organize_col(df):
-    factor_int=pd.DataFrame()
-    factor_char=pd.DataFrame()
-    factor_bool=pd.DataFrame()
+import pandas as pd
 
-    for column in df.columns:
-        if type(int) == True:
-            factor_int.append
-        if type(chr) == True :
-            factor_char.append
-        if factor.column.astype(bool) == True :
-            factor_bool.append
+def organize_col(df):
+    # Select columns by dtype using pandas select_dtypes
+    factor_int = df.select_dtypes(include=['int64', 'int32', 'int16', 'int8'])
+    factor_bool = df.select_dtypes(include=['bool'])
+    factor_char = df.select_dtypes(include=['object', 'string'])
+
+    return factor_int, factor_bool, factor_char
+
 
 
 
