@@ -47,7 +47,8 @@ def organize_col(df):
 
     return factor_int, factor_bool, factor_char
 
-
+organize_col(factor)
+factor_seperated=organize_col(factor)
 
 
 # X= Heart_Data["Obesity", "Heart-Attack-History","Cholesterol","Diet",]
