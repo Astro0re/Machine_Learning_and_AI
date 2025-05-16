@@ -50,6 +50,8 @@ def organize_col(df):
 organize_col(factor)
 factor_seperated=organize_col(factor)
 
+Int_factor = factor_seperated['factor_int']
+bool_factor = factor_seperated['factor_bool']
 
 # X= Heart_Data["Obesity", "Heart-Attack-History","Cholesterol","Diet",]
 
