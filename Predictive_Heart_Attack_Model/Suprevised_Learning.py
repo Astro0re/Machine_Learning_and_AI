@@ -52,9 +52,10 @@ factor_seperated=organize_col(factor)
 
 Int_factor = factor_seperated['factor_int']
 bool_factor = factor_seperated['factor_bool']
+char_factor = factor_seperated['factor_char']
 
 label_encoders = {}
-    for column in :
+    for column in char_factor:
         label_encoders[column] = LabelEncoder()
         heart_data[column] = label_encoders[column].fit_transform(heart_data[column])
         print(f"{column} unique values after encoding:", heart_data[column].unique())
