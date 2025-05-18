@@ -41,7 +41,7 @@ type(factor.column).value_counts()
 
  # Select columns by dtype using pandas select_dtypes
 def organize_col(df):
-    factor_int = df.select_dtypes(include=['int64', 'int32', 'int16', 'int8'])
+    factor_int = df.select_dtypes(include=['int64', 'int32', 'int16', 'int8','float64'])
     factor_bool = df.select_dtypes(include=['bool'])
     factor_char = df.select_dtypes(include=['object', 'string'])
 
@@ -52,6 +52,12 @@ factor_seperated=organize_col(factor)
 
 Int_factor = factor_seperated['factor_int']
 bool_factor = factor_seperated['factor_bool']
+
+label_encoders = {}
+    for column in :
+        label_encoders[column] = LabelEncoder()
+        heart_data[column] = label_encoders[column].fit_transform(heart_data[column])
+        print(f"{column} unique values after encoding:", heart_data[column].unique())
 
 # X= Heart_Data["Obesity", "Heart-Attack-History","Cholesterol","Diet",]
 
