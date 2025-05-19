@@ -57,8 +57,12 @@ char_factor = factor_seperated['factor_char']
 label_encoders = {}
 for column in char_factor:
     label_encoders[column] = LabelEncoder()   
-    heart_data[column] = label_encoders[column].fit_transform(heart_data[column])
-    print(f"{column} unique values after encoding:", heart_data[column].unique())
+    Heart_Data[column] = label_encoders[column].fit_transform(Heart_Data[column])
+    print(f"{column} unique values after encoding:", Heart_Data[column].unique())
+
+for column in bool_factor:
+        Heart_Data[column] = Heart_Data[column].astype(int)
+        print(f"{column} values after conversion:", Heart_Data[column].unique())
 
 # X= Heart_Data["Obesity", "Heart-Attack-History","Cholesterol","Diet",]
 
