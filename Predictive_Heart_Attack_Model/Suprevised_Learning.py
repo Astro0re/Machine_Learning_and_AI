@@ -32,7 +32,7 @@ print(Heart_Data.shape)
 
 Heart_Data = Heart_Data.fillna('Null')
 
-factor = Heart_Data.loc[:, Heart_Data.columns != 'Heart_Attack']
+factor = Heart_Data.loc[:, Heart_Data.columns != 'Heart_Attack','ID']
 
 print(factor)
 
