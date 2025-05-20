@@ -18,3 +18,22 @@ colnames(breast_cancer_stats) <- breast_cancer_col_name
 breast_cancer_stats$Diagnosis <- as.factor(breast_cancer_stats$Diagnosis)
 breast_CancerstatsNoID <- breast_cancer_stats[2:ncol(breast_cancer_stats)]
 ggpairs(breast_CancerstatsNoID[1:5], aes(color=Diagnosis, alpha=0.4))
+
+# Remove first column
+breastCancerDataNoID <- breastCancerData[2:ncol(breastCancerData)]
+
+library(GGally)
+
+ggpairs(breastCancerDataNoID[1:5], aes(color=Diagnosis, alpha=0.4))
+
+library(caret)
+
+# Center & scale data
+ppv <- preProcess(breastCancerDataNoID, method = c("center", "scale"))
+breastCancerDataNoID_tr <- predict(ppv, breastCancerDataNoID)
+
+# Summarize first 5 columns of the original data
+breastCancerDataNoID[1:5] %>% summary()
+
+# Summarize first 5 columns of the re-centered and scaled data
+breastCancerDataNoID_tr[1:5] %>% summary()
