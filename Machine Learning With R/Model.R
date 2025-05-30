@@ -1,15 +1,15 @@
 # Tips to get started
 ## To install needed CRAN packages:
-install.packages("tidyverse")
-install.packages("GGally")
-install.packages("caret")
-install.packages("gmodels")
-install.packages("rpart")
-install.packages("rpart.plot")
-install.packages("dendextend")
-install.packages("randomForest")
-install.packages("mlr3")
-install.packages("devtools")
+library(tidyverse)
+library(GGally)
+library(caret)
+library(gmodels)
+]library(rpart)
+library(rpart.plot)
+library(dendextend)
+library(randomForest)
+library(mlr3)
+library(devtools)
 
 ## To install needed Bioconductor packages:
 if (!requireNamespace("BiocManager", quietly = TRUE))
@@ -26,6 +26,6 @@ install_github("vqv/ggbiplot")
 library(deepnet)
 Data <- read.csv()
 
-Data %>%  ggplot( aes= , )+
+Data %>%  ggplot(aes= , ) +
   geom.()
 
