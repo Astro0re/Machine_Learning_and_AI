@@ -13,9 +13,9 @@ breast_cancer_col_name <- c("ID","Diagnosis","Radius.Mean","Texture.Mean",
                             "Compactness.Worst","Concavity.Worst","Concave.Points.Worst",
                             "Symmetry.Worst","Fractal.Dimension.Worst")
 
-colnames(breast_cancer_stats) <- breast_cancer_col_name
+colnames(breast_Cancer_stats) <- breast_cancer_col_name
 
-breast_cancer_stats$Diagnosis <- as.factor(breast_cancer_stats$Diagnosis)
+breast_Cancer_stats$Diagnosis <- as.factor(breast_Cancer_stats$Diagnosis)
 breast_CancerstatsNoID <- breast_cancer_stats[2:ncol(breast_cancer_stats)]
 ggpairs(breast_CancerstatsNoID[1:5], aes(color=Diagnosis, alpha=0.4))
 
