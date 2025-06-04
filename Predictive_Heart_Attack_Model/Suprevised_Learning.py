@@ -79,3 +79,27 @@ lr=LinearRegression()
 lr.fit(factor,target)
 pre_2 = lr.predict(factor)
 print(pre_2)
+
+def prepare_features_and_target(heart_data):
+    """Prepare features and target variable for model training."""
+    print("\nPreparing features and target variable...")
+    
+    # Separate features and target
+    X = heart_data.drop(['ID', 'Heart_Attack'], axis=1)
+    y = heart_data['Heart_Attack']
+    
+    print("Feature shape:", X.shape)
+    print("Target shape:", y.shape)
+    
+    # Split the data
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    print("\nTraining set size:", X_train.shape)
+    print("Testing set size:", X_test.shape)
+    
+    # Scale the features
+    scaler = StandardScaler()
+    X_train_scaled = scaler.fit_transform(X_train)
+    X_test_scaled = scaler.transform(X_test)
+    print("Feature scaling completed")
+    
+    return X_train_scaled, X_test_scaled, y_train, y_test
