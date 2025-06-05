@@ -22,7 +22,6 @@ ggpairs(breast_CancerstatsNoID[1:5], aes(color=Diagnosis, alpha=0.4))
 # Remove first column
 breastCancerDataNoID <- breastCancerData[2:ncol(breastCancerData)]
 
-library(GGally)
 
 ggpairs(breastCancerDataNoID[1:5], aes(color=Diagnosis, alpha=0.4))
 
@@ -38,6 +37,5 @@ breastCancerDataNoID[1:5] %>% summary()
 # Summarize first 5 columns of the re-centered and scaled data
 breastCancerDataNoID_tr[1:5] %>% summary()
 
-library(GGally)
 
 ggpairs(breastCancerDataNoID_tr[1:5], aes(color=Diagnosis, alpha=0.4))
