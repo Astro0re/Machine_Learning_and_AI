@@ -18,7 +18,7 @@ def load_and_explore_data():
     """Load the dataset and perform initial exploration."""
     print("Loading and exploring the dataset...")
     # Load the dataset
-    heart_data = pd.read_csv("heart_attack_russia.csv")
+    heart_data = pd.read_csv ( r"C:\Users\USER\Documents\VSC\Git_\AI\Predictive_Heart_Attack_Model\heart_attack_russia.csv" )
     
     # Display basic information about the dataset
     print("\nDataset Info:")
