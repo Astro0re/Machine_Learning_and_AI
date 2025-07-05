@@ -1,6 +1,7 @@
 library(ggpairs)
+library(GGally)
 
-breast_cancer_stats <- read.csv("C:/Users/USER/Downloads/breast+cancer+wisconsin+diagnostic/wdbc.data", header=FALSE)
+breast_cancer <- read.csv("C:/Users/USER/Downloads/breast+cancer+wisconsin+diagnostic/wdbc.data", header=FALSE)
 
 breast_cancer_col_name <- c("ID","Diagnosis","Radius.Mean","Texture.Mean",
                             "Perimeter.Mean","Area.Mean","Smoothness.Mean","Compactness.Mean",
@@ -13,11 +14,13 @@ breast_cancer_col_name <- c("ID","Diagnosis","Radius.Mean","Texture.Mean",
                             "Compactness.Worst","Concavity.Worst","Concave.Points.Worst",
                             "Symmetry.Worst","Fractal.Dimension.Worst")
 
-colnames(breast_Cancer_stats) <- breast_cancer_col_name
+colnames(breast_cancer) <- breast_cancer_col_name
 
-breast_Cancer_stats$Diagnosis <- as.factor(breast_Cancer_stats$Diagnosis)
-breast_CancerstatsNoID <- breast_cancer_stats[2:ncol(breast_cancer_stats)]
-ggpairs(breast_CancerstatsNoID[1:5], aes(color=Diagnosis, alpha=0.4))
+breast_cancer$Diagnosis <- as.factor(breast_cancer$Diagnosis)
+
+breast_cancer$ID <- 0
+
+ggpairs(breast_cancer[2:6], aes(color=Diagnosis, alpha=0.4))
 
 # Remove first column
 breastCancerDataNoID <- breastCancerData[2:ncol(breastCancerData)]
