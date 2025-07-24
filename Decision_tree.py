@@ -1,5 +1,5 @@
 # Should you Save or Spend
-def Save_or_Spend():
+def save_or_spend():
     balance= int(input("How Much do you have: "))
     want= int(input("How much do you want to save: "))
     remain = balance - want
@@ -8,9 +8,10 @@ def Save_or_Spend():
     else:
         print("Please Save!!!")
 
+Save_or_Spend()
 
-# Lagos Movement
-def Lagos_Movement():
+# Lagos Movement Decision tree
+def lagos_movement():
     print("So we want to go out?")
     print("In this Economy!!!")
     print("Alright, Let's see if we can.")
