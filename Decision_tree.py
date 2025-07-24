@@ -27,7 +27,7 @@ def Lagos_Movement():
         weekend = 1
     else:
         print("No matching scenario found. Please check your inputs.")
-        print(day)
+        
     
     weekday_calm= 0
     weekend_fun= 0
@@ -42,38 +42,35 @@ def Lagos_Movement():
         weekend_fun = 1
     else:
         print("No matching scenario found. Please check your inputs.")
-        print(day_time)
+        
 
     indoor= 0
     outdoor= 0    
     location=input("Is it an indoor or outdoor event? (indoor/outdoor): ").strip().lower()
-    if day_time == "indoor":
-        indoor= 1
-    elif day_time == "outdoor":
-        outdoor= 1
-    else:
-        print("No matching scenario found. Please check your inputs.")
-        print(location)
+    if location == "indoor":
+        indoor = 1
+    elif location == "outdoor":
+        outdoor = 1
     
-    weather=input("How is the weather looking? (clear/raining)").strip().lower()
-    if weekday_calm == 1 and indoor == 1 &weather == "clear":
+    weather=input("How is the weather looking? (clear/raining): ").strip().lower()
+    if weekday_calm == 1 and indoor == 1 and weather == "clear":
         print("Alright have fun, and be careful in the dark")
-    elif weekday_calm == 1 and outdoor == 1 &weather == "clear":
+    elif weekday_calm == 1 and outdoor == 1 and weather == "clear":
         print("Alright have fun, and be careful in the dark")
-    elif weekend_fun == 1 and indoor == 1 &weather == "clear":
+    elif weekend_fun == 1 and indoor == 1 and weather == "clear":
         print("Alright have fun")
-    elif weekend_fun == 1 and outdoor == 1 &weather == "clear":
+    elif weekend_fun == 1 and outdoor == 1 and weather == "clear":
         print("Alright have fun, do not forget your shades")
-    elif weekday_calm == 1 and indoor == 1 &weather == "raining":
+    elif weekday_calm == 1 and indoor == 1 and weather == "raining":
         print("Alright have fun, take an umbreall with you")
-    elif weekday_calm == 1 and outdoor == 1 &weather == "raining":
+    elif weekday_calm == 1 and outdoor == 1 and weather == "raining":
         print("Yeah just stay indors for this one")
-    elif weekend_fun == 1 and indoor == 1 &weather == "raining":
+    elif weekend_fun == 1 and indoor == 1 and weather == "raining":
         print("Alright have fun")
-    elif weekend_fun == 1 and outdoor == 1 &weather == "raining":
+    elif weekend_fun == 1 and outdoor == 1 and weather == "raining":
         print("Yeah just stay indors for this one")
     else:
         print("No matching scenario found. Please check your inputs.")
-        print(weather)    
+          
 
 Lagos_Movement()
