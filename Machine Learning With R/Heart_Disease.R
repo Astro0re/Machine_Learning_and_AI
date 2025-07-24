@@ -21,7 +21,7 @@ BiocManager::install(c("limma", "edgeR"))
 library(devtools)
 install_github("vqv/ggbiplot")
 
-heart_Data <- read.csv("~/VSC/Git_/AI/Machine Learning With R/heart_attack_russia_youth_vs_adult for sql.csv")
+heart_Data <- read.csv("~/VSC/Git_/AI/Machine Learning With R/Data/Heart_Disease.csv")
 # My Model
 library(deepnet)
 Data <- read.csv()

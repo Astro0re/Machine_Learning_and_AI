@@ -8,7 +8,7 @@ def save_or_spend():
     else:
         print("Please Save!!!")
 
-Save_or_Spend()
+save_or_spend()
 
 # Lagos Movement Decision tree
 def lagos_movement():
@@ -74,4 +74,4 @@ def lagos_movement():
         print("No matching scenario found. Please check your inputs.")
           
 
-Lagos_Movement()
+lagos_movement()
