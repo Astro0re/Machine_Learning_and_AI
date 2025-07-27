@@ -23,9 +23,6 @@ install_github("vqv/ggbiplot")
 
 heart_Data <- read.csv("~/VSC/Git_/AI/Machine Learning With R/Data/Heart_Disease.csv")
 # My Model
-library(deepnet)
-Data <- read.csv()
 
-Data %>%  ggplot(aes= , ) +
-  geom_()
+ggpairs(heart_Data, aes(color=, alpha=0.4))
 
