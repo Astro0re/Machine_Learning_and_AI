@@ -22,7 +22,9 @@ library(devtools)
 install_github("vqv/ggbiplot")
 
 heart_Data <- read.csv("~/VSC/Git_/AI/Machine Learning With R/Data/Heart_Disease.csv")
-# My Model
+
+heart_Data$sex[heart_Data$sex== 1] <- "Male"
+heart_Data$sex[heart_Data$sex== 0] <- "Female"
 
 ggpairs(heart_Data, aes(color=, alpha=0.4))
 
