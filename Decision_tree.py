@@ -90,6 +90,9 @@ def chat():
             print("3. If you are using a programming language, check the documentation for string handling functions.")
         else:
             print("I am not sure how to help with that, but I will try my best!")
-    if "delivery" in prob.lower():
+    elif "delivery" in prob.lower():
         print("I am sorry to hear that, let us look into it on our end and get back to you")
-       
+    elif "refund" in prob.lower():
+        print("Please send us a receipt and proof that the order was not recived and we will process your refund as soon as possible")
+    else:
+        print("I did not quite get that, do reach out to our staff through _ _ _ for more help")
