@@ -90,6 +90,8 @@ def chat():
             print("3. If you are using a programming language, check the documentation for string handling functions.")
         else:
             print("I am not sure how to help with that, but I will try my best!")
+    elif "not found" in prob.lower():
+        print("Sorry this product is not available at the moment")
     elif "delivery" in prob.lower():
         print("I am sorry to hear that, let us look into it on our end and get back to you")
     elif "refund" in prob.lower():
