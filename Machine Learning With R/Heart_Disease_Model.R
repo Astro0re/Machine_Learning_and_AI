@@ -26,5 +26,5 @@ heart_Data <- read.csv("~/VSC/Git_/AI/Machine Learning With R/Data/Heart_Disease
 heart_Data$sex[heart_Data$sex== 1] <- "Male"
 heart_Data$sex[heart_Data$sex== 0] <- "Female"
 
-ggpairs(heart_Data, aes(color=, alpha=0.4))
+ggpairs(heart_Data[3:], aes(color=, alpha=0.4))
 
