@@ -77,7 +77,6 @@ def lagos_movement():
 lagos_movement()
 
 # AI chat bot for errors 
-# if "Text"/synonym of text in string output reccomended solutions 
 def chat():
     prob= input("How can i help you today? ")
     if "error" in prob.lower():
