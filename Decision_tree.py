@@ -77,18 +77,14 @@ def lagos_movement():
 lagos_movement()
 
 # AI chat bot for errors 
+# if "Text"/synonym of text in string output reccomended solutions 
 def chat():
     prob= input("How can i help you today? ")
     if "error" in prob.lower():
         print("I am sorry to hear that, can you please provide more details?")
-        details = input("Please describe the error: ")
-        if "text" in details.lower() or "string" in details.lower():
-            print("It seems like you are having issues with text handling. Here are some solutions:")
-            print("1. Check for typos in your text.")
-            print("2. Ensure that your text encoding is correct.")
-            print("3. If you are using a programming language, check the documentation for string handling functions.")
-        else:
-            print("I am not sure how to help with that, but I will try my best!")
+        det= input("Please provide more details about the error: ")
+        if "Connection" in det.lower():
+            print("It seems like there is a connection issue, please try again later")
     elif "not found" in prob.lower():
         print("Sorry this product is not available at the moment")
     elif "delivery" in prob.lower():
@@ -97,3 +93,5 @@ def chat():
         print("Please send us a receipt and proof that the order was not recived and we will process your refund as soon as possible")
     else:
         print("I did not quite get that, do reach out to our staff through _ _ _ for more help")
+
+chat()
