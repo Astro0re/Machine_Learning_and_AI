@@ -1,7 +1,7 @@
-# Should you Save or Spend
+# Spend-Save decision system
 def save_or_spend():
     balance= int(input("How Much do you have: "))
-    want= int(input("How much do you want to save: "))
+    want= int(input("How much do you want to spend: "))
     remain = balance - want
     if remain > (10 % balance) :
         print("You are free to spend")
@@ -77,7 +77,7 @@ def lagos_movement():
 lagos_movement()
 
 # AI chat bot for errors 
-# if "Text"/synonym of text in string output reccomended solutions 
+# Sales website Scenerio
 def chat():
     prob= input("How can i help you today? ")
     if "error" in prob.lower():
