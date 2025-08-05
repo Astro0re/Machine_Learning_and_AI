@@ -6,3 +6,6 @@ A machine learning model to predict heart attacks based on patient lifestyle fac
 
 ## Course work LLM 
 Large language model based on digital copies of course work done in university
+
+## Decision Tree
+Already programed responses to a series of events
