@@ -3,7 +3,7 @@ def save_or_spend():
     balance= int(input("How Much do you have: "))
     want= int(input("How much do you want to spend: "))
     remain = balance - want
-    if remain > (10 % balance) :
+    if remain > (balance * 0.2):
         print("You are free to spend")
     else:
         print("Please Save!!!")
@@ -24,7 +24,7 @@ def lagos_movement():
         print("We can go out on a weekday, but let's be cautious.")
         weekday = 1
     elif day.lower() in ["saturday", "sunday"]:
-        print("Great! We can go out on the weekend.")
+        print("Great! We can go out on a weekend.")
         weekend = 1
     else:
         print("No matching scenario found. Please check your inputs.")
@@ -67,7 +67,7 @@ def lagos_movement():
     elif weekday_calm == 1 and outdoor == 1 and weather == "raining":
         print("Yeah just stay indors for this one")
     elif weekend_fun == 1 and indoor == 1 and weather == "raining":
-        print("Alright have fun")
+        print("Alright have fun, take an umbreall with you")
     elif weekend_fun == 1 and outdoor == 1 and weather == "raining":
         print("Yeah just stay indors for this one")
     else:
@@ -85,8 +85,8 @@ def chat():
         det= input("Please provide more details about the error: ")
         if "Connection" in det.lower():
             print("It seems like there is a connection issue, please try again later")
-    elif "not found" in prob.lower():
-        print("Sorry this product is not available at the moment")
+    elif "not found" | "not find" | "not see" in prob.lower():
+        print("Sorry, this product is not available at the moment")
     elif "delivery" in prob.lower():
         print("I am sorry to hear that, let us look into it on our end and get back to you")
     elif "refund" in prob.lower():
