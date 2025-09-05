@@ -12,10 +12,13 @@ import tensorflow as tf
 # Web Scraping Function 
 def scrape():
     topic= input("What topic do you want to learn? ")
-    scr= pd.read_html(f"https://en.wikipedia.org/wiki/{topic}")
+    scr= requests.get(f"https://en.wikipedia.org/wiki/{topic}")
+    soup = BeautifulSoup(scr.text, "html.parser")
     if scr is True:
         print("Details collected succesfully")
-    return scr
+    else:
+        print("Details not collected")
+    return soup
   
    
 # Web Scrape the topics 
