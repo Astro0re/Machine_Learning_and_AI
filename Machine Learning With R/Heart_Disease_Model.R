@@ -22,13 +22,15 @@ BiocManager::install(c("limma", "edgeR"))
 library(devtools)
 install_github("vqv/ggbiplot")
 
+# Import Data 
 heart_Data <- read.csv("~/VSC/Git_/AI/Machine Learning With R/Data/Heart_Disease.csv")
 describe(heart_Data)
 
+#Exploratory Data Analysis
 heart_Data$sex[heart_Data$sex== 1] <- "Male"
 heart_Data$sex[heart_Data$sex== 0] <- "Female"
 
-ggpairs(heart_Data[3:], aes(color=, alpha=0.4))
+ggpairs(heart_Data[3:0], aes(color=, alpha=0.4))
 
 fitted(heart_Data)
 
