@@ -11,6 +11,7 @@ library(dendextend)
 library(randomForest)
 library(mlr3)
 library(devtools)
+library(corrplot)
 
 ## To install needed Bioconductor packages:
 if (!requireNamespace("BiocManager", quietly = TRUE))
@@ -29,6 +30,12 @@ describe(heart_Data)
 #Exploratory Data Analysis
 heart_Data$sex[heart_Data$sex== 1] <- "Male"
 heart_Data$sex[heart_Data$sex== 0] <- "Female"
+
+# Data Visualization 
+library(corrplot)
+
+data_cor <- cor(heart_Data[,1:13])
+corrplot(data_cor,method = "square")
 
 ggpairs(heart_Data[3:0], aes(color=, alpha=0.4))
 
