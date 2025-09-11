@@ -34,6 +34,14 @@ heart_Data$sex[heart_Data$sex== 0] <- "Female"
 # Data Visualization 
 library(corrplot)
 
+heart_Data %>% ggplot(aes(fasting.blood.sugar, fill= cholesterol))+
+  geom_bar()+
+  facet_wrap(~chest.pain.type)
+
+heart_Data %>% ggplot(aes(cholesterol))+
+  geom_boxplot()+
+  facet_wrap(~chest.pain.type)
+
 data_cor <- cor(heart_Data[,1:13])
 corrplot(data_cor,method = "square")
 
