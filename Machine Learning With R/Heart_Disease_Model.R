@@ -42,7 +42,10 @@ heart_Data %>% ggplot(aes(cholesterol))+
   geom_boxplot()+
   facet_wrap(~chest.pain.type)
 
-data_cor <- cor(heart_Data[,1:13])
+heart_Data %>% ggplot(aes(heart_Data$chest.pain.type, heart_Data$oldpeak))+
+  geom_point()
+
+dageom_col()data_cor <- cor(heart_Data[,1:13])
 corrplot(data_cor,method = "square")
 
 ggpairs(heart_Data[3:0], aes(color=, alpha=0.4))
