@@ -2,6 +2,7 @@
 #Large language model based on digital documents of my course work during college
 #Start with a single course first then scale to semeter...textbooks etc"
 # Packages 
+import os
 import pandas as pd
 import numpy as np 
 import matplotlib as plts
