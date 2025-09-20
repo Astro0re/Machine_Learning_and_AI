@@ -5,7 +5,7 @@
 import os
 import pandas as pd
 import numpy as np 
-import matplotlib as plts
+import matplotlib.pyplot as plt
 from bs4 import BeautifulSoup
 import requests
 import tensorflow as tf
@@ -23,13 +23,13 @@ def scrape():
   
    
 # Web Scrape the topics 
-corpus = pd.read_html("/c/Users/USER/Documents/VSC/Git_/AI/Course_Work_LLM/index.html")
+corpus = pd.read_html("C:/Users/USER/Documents/VSC/Git_/AI/Course_Work_LLM/index.html")
     
 scrape()
 
 
 # Tokenizer 
-tf.keras.preprocessing.text.Tokenizer()
+tokenizer = tf.keras.preprocessing.text.Tokenizer()
 
 # Encoder (Character to Integer)
 for i in range(len(corpus)):
