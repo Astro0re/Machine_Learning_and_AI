@@ -9,9 +9,11 @@ import matplotlib.pyplot as plt
 from bs4 import BeautifulSoup
 import requests
 import tensorflow as tf
+from sklearn.preprocessing import LabelEncoder, StandardScaler
 
 # Web Scraping Function 
 def scrape():
+    global soup
     topic= input("What topic do you want to learn? ")
     scr= requests.get(f"https://en.wikipedia.org/wiki/{topic}")
     soup = BeautifulSoup(scr.text, "html.parser")
@@ -20,20 +22,25 @@ def scrape():
     else:
         print("Details not collected")
     return soup
-  
-   
+
+
+
 # Web Scrape the topics 
 corpus = pd.read_html("C:/Users/USER/Documents/VSC/Git_/AI/Course_Work_LLM/index.html")
     
-scrape()
+text =scrape(corpus)
 
 
 # Tokenizer 
-tokenizer = tf.keras.preprocessing.text.Tokenizer()
+tokenized = tf.keras.preprocessing.text.Tokenizer(text)
 
 # Encoder (Character to Integer)
 for i in range(len(corpus)):
     if [i] == "A":
         print ("True")
     
+encode = LabelEncoder()
+
+vectors = encode.fit_transform(tokenized)
+
 # Decoder (Integer to Character)
