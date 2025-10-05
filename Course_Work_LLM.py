@@ -43,4 +43,7 @@ encode = LabelEncoder()
 
 vectors = encode.fit_transform(tokenized)
 
+model = tf.keras.Transformer
+
+LLM = model.train(vectors)
 # Decoder (Integer to Character)
