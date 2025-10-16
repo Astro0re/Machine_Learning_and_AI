@@ -10,6 +10,8 @@ from bs4 import BeautifulSoup
 import requests
 import tensorflow as tf
 from sklearn.preprocessing import LabelEncoder, StandardScaler
+import keras 
+from kera.preprocessing import Tokenizer 
 
 # Web Scraping Function 
 def scrape():
@@ -32,7 +34,7 @@ text =scrape(corpus)
 
 
 # Tokenizer 
-tokenized = tf.keras.preprocessing.text.Tokenizer(text)
+tokenized = tf.keras.preprocessing.Tokenizer(text)
 
 # Encoder (Character to Integer)
 for i in range(len(corpus)):
