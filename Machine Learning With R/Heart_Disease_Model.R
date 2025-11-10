@@ -54,3 +54,9 @@ fitted(heart_Data)
 
 ppv <- preProcess(heart_Data, method = c("center", "scale"))
 heart_Data_tr <- predict(ppv, heart_Data)
+
+# X (Target)
+X <- ppv['heart.disease']
+
+# Y (Features)
+Y <- ppv[!'heart.disease']

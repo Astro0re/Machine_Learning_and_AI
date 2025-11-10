@@ -35,6 +35,9 @@ ggpairs(breastCancerDataNoID[1:5], aes(color=Diagnosis, alpha=0.4))
 # Fit Data (Clean, Transform, Scale)
 ppv <- preProcess(breastCancerDataNoID, method = c("center", "scale"))
 
+X <- ppv['Diagnosis']
+Y <- ppv[!'Diagnosis']
+
 # Select and Train Model
 
 
