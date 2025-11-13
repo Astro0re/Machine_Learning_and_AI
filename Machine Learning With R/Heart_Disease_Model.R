@@ -60,3 +60,12 @@ X <- ppv['heart.disease']
 
 # Y (Features)
 Y <- ppv[!'heart.disease']
+
+# Model 2
+library(catools)
+
+split_target <- sample.split(heart_Data$target, SplitRatio = 0.65)
+train_data <- subset(heart_Data, split_values == T )
+test_data <- subset(heart_Data, split_values == F )
+
+lm(target~, data= train_data)
