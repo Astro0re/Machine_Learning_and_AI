@@ -1,6 +1,7 @@
 library(ggpairs)
 library(GGally)
 library(caret)
+library
 
 breast_cancer <- read.csv("C:/Users/USER/Downloads/breast+cancer+wisconsin+diagnostic/wdbc.data", header=FALSE)
 
