@@ -1,3 +1,4 @@
+# Packages ----
 library(ggpairs)
 library(GGally)
 library(caret)
@@ -30,7 +31,7 @@ breastCancerDataNoID <- breastCancerData[2:ncol(breastCancerData)]
 
 ggpairs(breastCancerDataNoID[1:5], aes(color=Diagnosis, alpha=0.4))
 
-# Process Data 
+# Process Data ---- 
 
 
 # Fit Data (Clean, Transform, Scale)
@@ -40,6 +41,12 @@ X <- ppv['Diagnosis']
 Y <- ppv[!'Diagnosis']
 
 # Select and Train Model
+library(catools)
 
+split_target <- sample.split(breast_cancer$Diagnosis, SplitRatio = 0.65)
+train_data <- subset(breast_cancer, split_values == T )
+test_data <- subset(breast_cancer, split_values == F )
+
+lm(target~, data= train_data)
 
 # Test Model Metrics
