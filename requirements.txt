@@ -1,0 +1,11 @@
+os
+pandas 
+numpy 
+matplotlib.pyplot 
+bs4 
+requests
+tensorflow
+sklearn
+keras 
+docx 
+scrapy
