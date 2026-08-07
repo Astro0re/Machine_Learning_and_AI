@@ -85,7 +85,7 @@ def chat():
         det= input("Please provide more details about the error: ")
         if "Connection" in det.lower():
             print("It seems like there is a connection issue, please try again later")
-    elif "not found" | "not find" | "not see" in prob.lower():
+    elif "not found" or "not find" or "not see" in prob.lower():
         print("Sorry, this product is not available at the moment")
     elif "delivery" in prob.lower():
         print("I am sorry to hear that, let us look into it on our end and get back to you")
@@ -95,3 +95,5 @@ def chat():
         print("I did not quite get that, do reach out to our staff through _ _ _ for more help")
 
 chat()
+
+# | = or
