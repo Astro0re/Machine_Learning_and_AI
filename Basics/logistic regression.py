@@ -12,7 +12,7 @@ df =pd.read_csv('iris.csv')
 x = df.drop(columns=['id','species'])
 y= df['species']
 
-model = LogisticRegression()
+model = LogisticRegression(class_weight='balanced', max_iter= 1000, random_state=42)
 
 model.fit(x,y)
 
